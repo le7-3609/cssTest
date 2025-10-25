@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+.continer{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+.header{
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    min-height: 80vh;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.menu{
+    position: absolute;
+    background-color:rgb(75, 75, 75);
+    min-height: 100%;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.menu:hover{
+    transition:  1s 0s;
+    .x{
+        display: block;
+    }
+    width: 200px;
+}
+.element{
+    border-bottom: 2px solid rgba(188, 188, 188, 0.652);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 15px;
+    gap:3px;
+}
+.x{
+    display: none;
+}
+.element:hover{
+    background-color: rgba(188, 188, 188, 0.652);
+}
+.x{
+    display: none;
+    text-align: center;
+}
+.all{
+    height: 100%;
+    min-width: 100%;
+    flex-grow: 1;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-left: 50px;
+}
+.color{
+    background-color:aquamarine;
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    animation: color 5s infinite alternate;
+}
+.animation{
+    animation: fontColor 5s infinite alternate;
+}
+@keyframes color{
+    0%{ background-color:aquamarine;
+    }
+    25%{
+        background-color:lightcoral;
+    }
+    50%{
+        background-color:lightskyblue;
+    }
+    25%{
+        background-color:rgb(240, 149, 240);
+    }
+    100%{
+        background-color:aquamarine;
+    }
+}
+@keyframes fontColor{
+    10%{ color:white;
+    }
+    30%{
+        color:gray;
+    }
+    50%{
+       color:rgb(0, 0, 0);
+    }
+    70%{
+        color:gray;
+    }
+    90%{
+       color:white;
+    }
+}
+.box{
+    min-height: 63vh;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    background-color: rgb(243, 243, 243);
+}
+.box2{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 4px 0px;
+    font-size: 1.2rem;
+    transition: all 1s 0s;
+}
+.lerom{
+    display: none;
+    text-align: center;
+}
+.box2:hover{
+    .lerom{
+        display: block;
+    }
+    transform: translateY(2px);
+}
+.footer{
+    background-color: black;
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+@media only screen and (max-width: 700px){
+    .box2{
+    width: 85%;
+    }
+    .box{
+        justify-content: center;
+    }
+    .main{
+        flex-direction: column;
+    }
+    .menu{
+        position: relative;
+        width: 100%;
+        height: 50px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .element{
+        border: 0px;
+    }
+    .menu:hover{
+        .x{
+            display: none;
+        }
+        width: 100%;
+    }
+    .all{
+        padding-left: 0px;
+    }
+}
+</style>
+<body>
+    <div class="continer">
+    <div class="header">
+        <div class="mySite">My Site💎</div>
+    </div>
+    <div class="main">
+        <div class="menu">
+                <div class="element"><div>⛪</div><div class="x">Home</div></div>
+                <div class="element"><div>🛠</div><div class="x">Tooles</div></div>
+                <div class="element"><div>☎️</div><div class="x">Contact</div></div>
+                <div class="element"><div>📝</div><div class="x">About</div></div>
+        </div>
+        <div class="all">
+            <div class="color">
+                <div class="Animate">Animate color area</div>
+            </div>
+            <div class="box">
+                <div class="box2"><div class="news"><b>News 1</b></div><div class="lerom">Idont know to write lerom ipsum</div></div>
+                <div class="box2"><div class="news"><b>News 2</b></div><div class="lerom">Idont know to write lerom ipsum</div></div>
+                <div class="box2"><div class="news"><b>News 3</b></div><div class="lerom">Idont know to write lerom ipsum</div></div>
+                <div class="box2"><div class="news"><b>News 4</b></div><div class="lerom">Idont know to write lerom ipsum</div></div>
+                <div class="box2"><div class="news"><b>News 5</b></div><div class="lerom">Idont know to write lerom ipsum</div></div>
+                <div class="box2"><div class="news"><b>News 6</b></div><div class="lerom">Idont know to write lerom ipsum</div></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"><div>&copy; 2025 All right reserved</div></div></div>
+</div>
+</body>
+</html>
